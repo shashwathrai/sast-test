@@ -38,7 +38,24 @@ jobs:
           # The GitHub token is automatically generated for the job
           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-        # [Mandatory if using OIDC authentication protocol instead of JF_ACCESS_TOKEN]
-        # Insert to oidc-provider-name the 'Provider Name' defined in the OIDC integration configured in the JPD
-        # with:
-        #   oidc-provider-name: ""
+          # [Optional]
+          # If the machine that runs Frogbot has no access to the internat, set the name of a remote repository
+          # in Artifactory, which proxies https://releases.jfrog.io/artifactory
+          # The 'frogbot' executable and other tools it needs will be downloaded through this repository.
+          # JF_RELEASES_REPO: ""
+
+          # [Optional]
+          # Xray Watches. Learn more about them here: https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray+Watches
+          # JF_WATCHES: <watch-1>,<watch-2>...<watch-n>
+
+          # [Optional]
+          # JFrog project. Learn more about it here: https://www.jfrog.com/confluence/display/JFROG/Projects
+          #JF_PROJECT: genai
+
+          # [Optional, default: "TRUE"]
+          # Fails the Frogbot task if any security issue is found.
+          JF_FAIL: "FALSE"
+
+          # [Optional, default: "FALSE"]
+          # Displays all existing vulnerabilities, including the ones that were added by the pull request.
+          JF_INCLUDE_ALL_VULNERABILITIES: "TRUE"
