@@ -5,7 +5,19 @@
 
 trigger:
 - master
-
+- task: ArtifactoryMaven@2
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'install'
+    artifactoryResolverService: 'adoption Artifactory'
+    targetResolveReleaseRepo: 'pepsico-libs-release'
+    targetResolveSnapshotRepo: 'pepsico-libs-snapshot'
+    artifactoryDeployService: 'adoption Artifactory'
+    targetDeployReleaseRepo: 'pepsico-libs-release'
+    targetDeploySnapshotRepo: 'pepsico-libs-snapshot'
+    collectBuildInfo: true
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
 pool: 
   name: davidka
 
