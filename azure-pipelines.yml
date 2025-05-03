@@ -5,6 +5,11 @@
 
 trigger:
 - master
+
+pool:
+  name: davidka
+
+steps:
 - task: ArtifactoryMaven@2
   inputs:
     mavenPomFile: 'pom.xml'
@@ -18,10 +23,7 @@ trigger:
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-pool: 
-  name: davidka
 
-steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
