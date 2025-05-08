@@ -200,7 +200,7 @@
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
-            <!-- For testing, you can use the vulnerable version of 1.4.10. -->
+            <!-- For testing, you can use the vulnerable version of 1.4.10. 
             <version>1.4.20</version> <!-- use latest version to exploit vuln by using xstream.addPermission-->
         </dependency>
 
