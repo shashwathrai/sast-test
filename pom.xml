@@ -200,9 +200,16 @@
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
-            <!-- For testing, you can use the vulnerable version of 1.4.10. 
+            <!-- For testing, you can use the vulnerable version of 1.4.10. -->
             <version>1.4.20</version> <!-- use latest version to exploit vuln by using xstream.addPermission-->
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.10-FINAL</version>
+        </dependency>
+
         <!-- vuln maven jar. Solve xlsx.-->
         <dependency>
             <groupId>org.apache.poi</groupId>
