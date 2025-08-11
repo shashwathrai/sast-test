@@ -59,11 +59,7 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
-        <dependency>
-            <groupId>org.dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-            <version>2.1.0</version>
-        </dependency>
+
 
 
         <!-- 获取url根域名-->
