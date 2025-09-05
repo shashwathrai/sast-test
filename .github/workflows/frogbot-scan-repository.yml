@@ -35,6 +35,7 @@ jobs:
           # [Mandatory if JF_ACCESS_TOKEN is not provided]
           # JFrog password. Must be provided with JF_USER
           # JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
+          JFROG_CLI_CA_CERT_PATH: "/builds/$CI_PROJECT_PATH/xray-root-ca.pem"
 
           # [Mandatory]
           # The GitHub token is automatically generated for the job
