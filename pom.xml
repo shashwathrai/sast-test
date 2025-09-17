@@ -28,7 +28,7 @@
         </dependency>
 
 
-        <!-- 添加thymeleaf为了动态解析html-->
+        <!-- 添加thymelea了动态解析html-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
