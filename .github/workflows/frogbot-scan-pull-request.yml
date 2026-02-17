@@ -4,7 +4,7 @@ on:
     types: [opened, synchronize]
 permissions:
   pull-requests: write
-  contents: read
+  contents: write
   # [Mandatory If using OIDC authentication protocol instead of JF_ACCESS_TOKEN]
   # id-token: write
 jobs:
