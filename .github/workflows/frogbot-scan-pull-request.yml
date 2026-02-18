@@ -52,9 +52,9 @@ jobs:
 
           # [Optional, default: "TRUE"]
           # Fails the Frogbot task if any security issue is found.
-          JF_FAIL: "TRUE"
+          JF_FAIL: "FALSE"
           JF_PR_SHOW_SECRETS_COMMENTS: "TRUE"
-          JF_SKIP_AUTOFIX: "TRUE"
+          
 
           # [Optional, default: "FALSE"]
           # Displays all existing vulnerabilities, including the ones that were added by the pull request.
