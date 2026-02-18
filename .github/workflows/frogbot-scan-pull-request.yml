@@ -4,7 +4,7 @@ on:
     types: [opened, synchronize]
 permissions:
   pull-requests: write
-  contents: read
+  contents: write
   # [Mandatory If using OIDC authentication protocol instead of JF_ACCESS_TOKEN]
   # id-token: write
 jobs:
@@ -18,7 +18,7 @@ jobs:
         env:
           # [Mandatory]
           # JFrog platform URL
-          JFROG_CLI_LOG_LEVEL: DEBUG
+          #JFROG_CLI_LOG_LEVEL: DEBUG
           JF_URL: ${{ secrets.JF_URL }}
           
 
@@ -44,15 +44,17 @@ jobs:
         #   oidc-provider-name: ""
         # [Optional]
           # Xray Watches. Learn more about them here: https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray+Watches
-          #JF_WATCHES: srs
+          
 
           # [Optional]
           # JFrog project. Learn more about it here: https://www.jfrog.com/confluence/display/JFROG/Projects
-          #JF_PROJECT: genai
+          
 
           # [Optional, default: "TRUE"]
           # Fails the Frogbot task if any security issue is found.
           JF_FAIL: "FALSE"
+          JF_PR_SHOW_SECRETS_COMMENTS: "TRUE"
+          
 
           # [Optional, default: "FALSE"]
           # Displays all existing vulnerabilities, including the ones that were added by the pull request.
