@@ -11,7 +11,7 @@ jobs:
   scan-pull-request:
     runs-on: ubuntu-latest
     # A pull request needs to be approved before Frogbot scans it. Any GitHub user who is associated with the
-    # "frogbot" GitHub environment can approve the pull request to be scanned. Dummy
+    # "frogbot" GitHub environment can approve the pull request to be scanned. testsrs
     environment: frogbot
     steps:
       - uses: jfrog/frogbot@v2
